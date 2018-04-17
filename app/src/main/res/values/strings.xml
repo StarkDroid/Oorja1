@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Oorja</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
+    <string name="title_slide1">Swipeable Tabs</string>
+    <string name="desc_slide1">Easily switch between maps with just one swipe</string>
+    <string name="title_slide2">Solar map</string>
+    <string name="desc_slide2">View the radiation levels and other solar related details</string>
+    <string name="title_slide3">Wind map</string>
+    <string name="desc_slide3">Determine wind energy and other wind related details</string>
+    <string name="title_slide4">Hybrid Map</string>
+    <string name="desc_slide4">View both the map to get an average estimation of solar and wind energy</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
