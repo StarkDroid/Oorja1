@@ -1,0 +1,50 @@
+    html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width:100%;
+    }
+
+    #mapContainer{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;  
+    position: relative;
+    z-index: 0;
+    }
+
+    #mapDiv{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    }
+
+    #buffer{
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    }
+
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    td {
+    padding: 4px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    }
+
+    th{
+    padding: 4px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;  
+    background-color: #D3D3D3;
+    }

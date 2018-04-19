@@ -14,4 +14,29 @@
     <string name="title_slide4">Hybrid Map</string>
     <string name="desc_slide4">View both the map to get an average estimation of solar and wind energy</string>
     <string name="title_activity_maps">Map</string>
+
+    <!--- Calculator -->
+    <string name="latitude_name">Latitude :</string>
+    <string name="longitude_name">Longitude :</string>
+    <string name="ghi_name">GHI (kwh/sq.m/year) :</string>
+    <string name="get_button">FETCH</string>
+    <string name="chennai_latitude">12.956613</string>
+    <string name="chennai_longitude">80.214293</string>
+    <string name="aep_name">AEP :</string>
+    <string name="area_m2">AREA (m2) :</string>
+    <string name="location_data">LOCATION DATA</string>
+    <string name="latitude1">Latitude :</string>
+    <string name="longitude1">Longitude :</string>
+    <string name="state">State :</string>
+    <string name="district">District :</string>
+    <string name="taluk">Taluk :</string>
+    <string name="solar_data">SOLAR DATA</string>
+    <string name="ghi">GHI :</string>
+    <string name="dhi">DHI :</string>
+    <string name="dni">DNI :</string>
+    <string name="cuf">CUF :</string>
+    <string name="wind_data">WIND DATA</string>
+    <string name="cuf1">CUF :</string>
+    <string name="wpd">WPD :</string>
+    <string name="windspeed">WindSpeed :</string>
 </resources>

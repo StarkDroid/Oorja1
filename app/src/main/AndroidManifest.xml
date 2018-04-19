@@ -28,6 +28,9 @@
         android:theme="@style/AppTheme.NoActionBar" />
     <activity android:name=".IntroActivity" />
         <activity android:name=".MapActivity" />
+        <activity android:name=".CalculatorActivity"/>
+        <activity android:name=".WindMapActivity"/>
+        <activity android:name=".HybridMapActivity"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

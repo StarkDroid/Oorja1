@@ -2,6 +2,7 @@ package niwe.oorja1;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,8 +12,12 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.hitomi.cmlibrary.CircleMenu;
+import com.hitomi.cmlibrary.OnMenuSelectedListener;
 
 public class MainActivity extends AppCompatActivity  {
+
+    CircleMenu circleMenu;
 
     private static final String TAG = "MainActivity";
 
@@ -24,20 +29,45 @@ public class MainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(isServicesOK()){
-            init();
-        }
+        CircleMenu circleMenu = (CircleMenu)findViewById(R.id.circle_menu);
+
+        circleMenu.setMainMenu(Color.parseColor("#CDCDCD"),R.drawable.ic_add, R.drawable.ic_remove)
+                                    .addSubMenu(Color.parseColor("#9cec9c"), R.drawable.wind)
+                                    .addSubMenu(Color.parseColor("#723584"), R.drawable.ic_sun)
+                                    .addSubMenu(Color.parseColor("#ffe6ff"), R.drawable.hybrid)
+                                    .addSubMenu(Color.parseColor("#245569"), R.drawable.calculator)
+                                    .setOnMenuSelectedListener(new OnMenuSelectedListener() {
+                                        @Override
+                                        public void onMenuSelected(int index) {
+                                            switch (index) {
+                                                case 0:
+                                                    Toast.makeText(MainActivity.this, "Wind map clicked", Toast.LENGTH_SHORT).show();
+                                                    startActivity(new Intent(MainActivity.this, WindMapActivity.class));
+                                                    break;
+                                                case 1:
+                                                    Toast.makeText(MainActivity.this, "Solar map clicked", Toast.LENGTH_SHORT).show();
+                                                    startActivity(new Intent(MainActivity.this, MapActivity.class));
+                                                    break;
+                                                case 2:
+                                                    Toast.makeText(MainActivity.this, "Hybrid map clicked", Toast.LENGTH_SHORT).show();
+                                                    startActivity(new Intent(MainActivity.this, HybridMapActivity.class));
+                                                    break;
+                                                case 3:
+                                                    Toast.makeText(MainActivity.this, "Calculator button clicked", Toast.LENGTH_SHORT).show();
+                                                    startActivity(new Intent(MainActivity.this, CalculatorActivity.class));
+                                                    break;
+                                            }
+                                        }
+                                    });
+
     }
 
-    private void init(){
-        Button btnMap = (Button) findViewById(R.id.btnMap);
-        btnMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MapActivity.class);
-                startActivity(intent);
-            }
-        });
+    @Override
+    public void onBackPressed() {
+        if (circleMenu.isOpened())
+            circleMenu.closeMenu();
+        else
+            finish();
     }
 
     public boolean isServicesOK(){
