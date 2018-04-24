@@ -1,4 +1,4 @@
-package niwe.oorja1;
+package niwe.swurja;
 
 import android.*;
 import android.Manifest;
@@ -50,7 +50,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import niwe.oorja1.models.PlaceInfo;
+import niwe.swurja.models.PlaceInfo;
 
 /**
  * Created by Trishiraj on 15/4/2018.

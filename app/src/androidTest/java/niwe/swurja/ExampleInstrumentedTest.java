@@ -1,4 +1,4 @@
-package niwe.oorja1;
+package niwe.swurja;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

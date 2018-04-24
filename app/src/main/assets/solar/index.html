@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <title>solar map</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/51065D40-FA40-1548-8C5B-762D06DB55A0/main.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $("#btnPrint").live("click", function () {
+            var area = $("#area").html();
+			var aep = $("#aep").html();
+			var capacity = $("#capacity").html();
+			var total = $("#total").html();
+			var money = $("#money").html();
+			var cuf = $("#cuf").html();
+			var position = $("#position").html();
+			var exceedence = $("#exceedence").html();
+			var carbon = $("#carbon").html();
+            var printWindow = window.open('', '', 'height=400,width=800');
+            printWindow.document.write('<html><head><title>DIV Contents</title>');
+            printWindow.document.write('</head><body >');
+            printWindow.document.write(area);
+			printWindow.document.write(aep);
+			printWindow.document.write(capacity);
+			printWindow.document.write(total);
+			printWindow.document.write(money);
+			printWindow.document.write(cuf);
+			printWindow.document.write(position);
+			printWindow.document.write(exceedence);
+			printWindow.document.write(carbon);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        });
+    </script>
+</head>
+<body>
+<form id="form1">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <div id="mapcontainer">
+                <input type="text" id="autocomplete" value="">
+                <div id="map" >
+                    <!-- This is the map area-->
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div>
+                <div id="area"></div>
+                <div id="aep" ></div>
+                <div id ="capacity"></div>
+                <div id="total"></div>
+                <div id="money"></div>
+                <div id="cuf"></div>
+                <div id="position"></div>
+                <div id="exceedence"></div>
+                <div id="carbon"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+<br>
+<br>
+<br>
+<!--<form id="form1">-->
+    <!--<div id="area"></div>-->
+    <!--<div id="aep" ></div>-->
+    <!--<div id ="capacity"></div>-->
+    <!--<div id="total"></div>-->
+    <!--<div id="money"></div>-->
+    <!--<div id="cuf"></div>-->
+    <!--<div id="position"></div>-->
+    <!--<div id="exceedence"></div>-->
+    <!--<div id="carbon"></div>-->
+    <!--<input type="button" value="DOWNLOAD REPORT" id="btnPrint" />-->
+<!--</form>-->
+<br>
+<br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaCBvRVzmLQanF6v7wGfwmj3s0Coizcs0&libraries=places,drawing,geometry&callback=initMap"></script>
+<script src="main.js"></script>
+
+
+
+</body>
+</html>

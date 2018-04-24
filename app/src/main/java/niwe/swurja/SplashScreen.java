@@ -1,4 +1,4 @@
-package niwe.oorja1;
+package niwe.swurja;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package niwe.oorja1;
+package niwe.swurja;
 
 import org.junit.Test;
 

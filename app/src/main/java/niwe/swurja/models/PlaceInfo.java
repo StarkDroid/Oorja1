@@ -1,4 +1,4 @@
-package niwe.oorja1.models;
+package niwe.swurja.models;
 
 import android.net.Uri;
 import com.google.android.gms.maps.model.LatLng;

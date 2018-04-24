@@ -74,7 +74,7 @@ function outputh(data){
      str = "Please select an location within India";
      map.infoWindow.setContent(str);
      }else{   
-                   var parsetxtraw = JSON.parse(b);
+
      	var ut = parsetxtraw.features[0].attributes.UT;
      	var state = parsetxtraw.features[0].attributes.State;
      	var cuf = parsetxtraw.features[0].attributes.CUF;

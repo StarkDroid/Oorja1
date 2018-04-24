@@ -1,4 +1,4 @@
-package niwe.oorja1;
+package niwe.swurja;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity  {
         CircleMenu circleMenu = (CircleMenu)findViewById(R.id.circle_menu);
 
         circleMenu.setMainMenu(Color.parseColor("#CDCDCD"),R.drawable.ic_add, R.drawable.ic_remove)
-                                    .addSubMenu(Color.parseColor("#9cec9c"), R.drawable.wind)
-                                    .addSubMenu(Color.parseColor("#723584"), R.drawable.ic_sun)
-                                    .addSubMenu(Color.parseColor("#ffe6ff"), R.drawable.hybrid)
-                                    .addSubMenu(Color.parseColor("#245569"), R.drawable.calculator)
+                                    .addSubMenu(Color.parseColor("#ffffff"), R.drawable.wind)
+                                    .addSubMenu(Color.parseColor("#ffffff"), R.drawable.ic_sun)
+                                    .addSubMenu(Color.parseColor("#ffffff"), R.drawable.hybrid)
+                                    .addSubMenu(Color.parseColor("#ffffff"), R.drawable.calculator)
                                     .setOnMenuSelectedListener(new OnMenuSelectedListener() {
                                         @Override
                                         public void onMenuSelected(int index) {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity  {
                                                     break;
                                                 case 1:
                                                     Toast.makeText(MainActivity.this, "Solar map clicked", Toast.LENGTH_SHORT).show();
-                                                    startActivity(new Intent(MainActivity.this, MapActivity.class));
+                                                    startActivity(new Intent(MainActivity.this, SolarMapActivity.class));
                                                     break;
                                                 case 2:
                                                     Toast.makeText(MainActivity.this, "Hybrid map clicked", Toast.LENGTH_SHORT).show();
