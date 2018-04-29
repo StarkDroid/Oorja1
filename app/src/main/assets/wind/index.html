@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-    <html>
-    <head>
+<html>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
     <title>WIND LAYER</title>
-    <link rel="stylesheet" href="https://js.arcgis.com/3.22/esri/css/esri.css"/>
-    <link rel="stylesheet" href="styleme.css">
-    <script src="https://js.arcgis.com/3.22/"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.22/esri/css/esri.css"/>
+    <script src="https://js.arcgis.com/3.22/"></script>
+    <link rel="stylesheet" href="styleme.css">
     <script src="main.js"></script>
-    </head>
-    <body>
-    <div id="mapContainer">
+</head>
+<body>
+<div id="mapContainer">
+    <div id="search"></div>
     <div id="mapDiv"></div>
     <input type="image" alt="bufferimage" width="31" height="31" id="buffer" src="buffericon.gif"/>
-    </div>
-    </body>
-    </html>
+    <input type="range" min="1" max="10" value="10" id="myRange">
+</div>
+</body>
+</html>

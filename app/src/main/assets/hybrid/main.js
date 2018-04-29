@@ -5,6 +5,7 @@
     var lng;
     var x;
     var y;
+
     var hlatitude;
     var hlongitude;
     var hstate;
@@ -22,14 +23,16 @@
 
       require([
         "esri/map",
-        "esri/layers/ArcGISDynamicMapServiceLayer"
+        "esri/layers/ArcGISDynamicMapServiceLayer",
+        "esri/dijit/Search",
+        "dojo/domReady!"
       ], function (
-        Map, ArcGISDynamicMapServiceLayer) {
+        Map, ArcGISDynamicMapServiceLayer, Search) {
 
         map = new Map("mapDiv", {
 	  basemap:"satellite",
 	  zoom:4,
-	  center:[77, 23],
+	  center:[81.6296, 21.2514],
           sliderOrientation : "horizontal"
         });
 
@@ -37,30 +40,40 @@
           "opacity" : 1
         });
         map.addLayer(hybridlayer);
-        
+
+        search = new Search({
+        map: map
+        },"search");
+        search.startup();
+
         map.on("update-start", bufferstart);
         map.on("update-end", bufferend);
-        
+
         function bufferstart(){
-        document.getElementById("buffer").style.visibility = "visible";  
+        document.getElementById("buffer").style.visibility = "visible";
         }
-        
+
         function bufferend(){
-        document.getElementById("buffer").style.visibility = "hidden";    
+        document.getElementById("buffer").style.visibility = "hidden";
         }
-        
+
         map.on("click", addPoint);
 
         function addPoint(evt) {
         lat = evt.mapPoint.getLatitude();
         lng = evt.mapPoint.getLongitude();
         sendh();
-        map.infoWindow.setTitle("NIWE Hybrid Map Data");
+        map.infoWindow.setTitle("NIWE Solar and Wind Data");
         map.infoWindow.show(evt.mapPoint, map.getInfoWindowAnchor(evt.screenPoint));
         }
+
+        var slider = document.getElementById("myRange");
+        slider.oninput = function(){
+            hybridlayer.setOpacity(slider.value/10);
+        };
+
       });
-      
-      
+
 function sendh(){
      y = lat;
      x = lng;

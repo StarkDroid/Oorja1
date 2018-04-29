@@ -15,17 +15,36 @@
     <string name="desc_slide4">View both the map to get an average estimation of solar and wind energy</string>
     <string name="title_activity_maps">Map</string>
 
-    <!--- Calculator -->
+   <!-- SolarMap Strings -->
+    <string name="infowindow_latitude">Latitude :</string>
+    <string name="infowindow_latitude_value">0.0</string>
+    <string name="infowindow_longitude">Longitude :</string>
+    <string name="infowindow_longitude_value">0.0</string>
+    <string name="infowindow_state">State :</string>
+    <string name="infowindow_state_value">____</string>
+    <string name="infowindow_district">District :</string>
+    <string name="infowindow_district_value">____</string>
+    <string name="infowindow_taluk">Taluk :</string>
+    <string name="infowindow_taluk_value">____</string>
+    <string name="infowindow_ghi">GHI (kWh/sq.m/year) :</string>
+    <string name="infowindow_ghi_value">0.0</string>
+    <string name="infowindow_dhi">DHI (kWh/sq.m/year) :</string>
+    <string name="infowindow_dhi_value">0.0</string>
+    <string name="infowindow_dni">DNI (kWh/sq.m/year) :</string>
+    <string name="infowindow_dni_value">0.0</string>
+    <string name="infowindow_cuf">CUf (%) :</string>
+    <string name="infowindow_cuf_value">0.0</string>
+    <string name="infowindow_locality">Locality :</string>
+    <string name="infowindow_locality_values">____</string>
+    <string name="out_of_india">Please select an location within India</string>
     <string name="latitude">Latitude :</string>
     <string name="longitude">Longitude :</string>
     <string name="fetch">FETCH</string>
-    <string name="ghi">GHI (kWh/sq.m/year) :</string>
+    <string name="gti_value">GTI (kWh/sq.m/year) :</string>
     <string name="ghi_value">0.0</string>
     <string name="area">AREA (sq.m):</string>
     <string name="panel">PANEL :</string>
     <string name="calculate">CALCULATE</string>
-
-    <!-- Calculation Results -->
     <string name="results">RESULTS</string>
     <string name="power_plant_capacity">Power Plant Capacity (kW):</string>
     <string name="power_plant_capacity_value">0.0</string>
@@ -49,4 +68,16 @@
     <string name="co2_level_value">0.0</string>
     <string name="position_value">0.0</string>
     <string name="position">Position :</string>
+    <string name="gti">GTI :</string>
+    <string name="_0_0">0.0</string>
+    <string name="zero">0.0</string>
+    <string name="aep">AEP(MW):</string>
+    <string name="latitude_results">Latitude :</string>
+    <string name="longitude_results">Longitude :</string>
+    <string name="locality_results">Locality :</string>
+    <string name="empty_string">____</string>
+    <string name="lifetime_of_plant">LIFETIME OF PLANT :</string>
+    <string name="latitude_results_value">0.0</string>
+    <string name="longitude_results_value">0.0</string>
+    <string name="ghi">GHI (kWh/sq.m/year) :</string>
 </resources>
